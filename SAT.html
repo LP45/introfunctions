@@ -7,26 +7,32 @@
   <body>
       <p>JAVASCRIPT</p>
     <script>
-      let degFahren = prompt("Enter the degrees in Fahrenheit");
-      let degCel;
+      let degFahren = Number(prompt("Enter the degrees in Fahrenheit"));
       
       
-      function myTemp(degFahren)
+      
+      function myTemp()
       {
           return (5 / 9) * (degFahren - 32);
           
       }
       // Equation is 
       
-      
-      let msg = degFahren + "\xB0 Fahrenheit is " + degCel + "\xB0 ";     
-       if (myTemp(degFahren) < 69) {
+     function burr() {
+      let msg = degFahren + "\xB0 Fahrenheit is " + myTemp() + "\xB0 ";     
+       if (degFahren < 69) {
         alert(msg + "\n Oh that's cold!");
-      } else if (myTemp(degFahren) > 69 && degFahren < 83) {
+      } 
+      else if ((degFahren > 69) && (degFahren < 83)) {
         alert(msg + "\n Temperature is just right!");
-      } else {
+      } 
+      else {
         alert(msg + "\n Its way too hot!");
-      }
+      }   
+     }
+
+    burr();
+      
     </script>
   </body>
 </html>
